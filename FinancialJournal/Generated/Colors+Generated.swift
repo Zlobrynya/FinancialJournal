@@ -23,6 +23,7 @@ internal enum Colors {
   internal static let primaryBg = ColorAsset(name: "primaryBg")
   internal static let accentButton = ColorAsset(name: "accentButton")
   internal static let primaryText = ColorAsset(name: "primaryText")
+  internal static let primaryTextNegative = ColorAsset(name: "primaryTextNegative")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 

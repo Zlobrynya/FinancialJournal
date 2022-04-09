@@ -25,6 +25,7 @@
 		812458382801C04C00F8AF8F /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 812458332801C04C00F8AF8F /* OpenSans-Italic.ttf */; };
 		812458392801C04C00F8AF8F /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 812458342801C04C00F8AF8F /* OpenSans-Bold.ttf */; };
 		8124583A2801C04C00F8AF8F /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 812458352801C04C00F8AF8F /* OpenSans-Regular.ttf */; };
+		8124583F2801D97900F8AF8F /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8124583E2801D97900F8AF8F /* PrimaryButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		812458332801C04C00F8AF8F /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
 		812458342801C04C00F8AF8F /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		812458352801C04C00F8AF8F /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		8124583E2801D97900F8AF8F /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 		811E12FB28017CC7008EC202 /* FinancialJournal */ = {
 			isa = PBXGroup;
 			children = (
+				8124583C2801D96000F8AF8F /* Styles */,
 				8124582D2801BF2800F8AF8F /* Extensions */,
 				811E130B28017ED1008EC202 /* Views */,
 				8124582A2801BAA700F8AF8F /* Feature */,
@@ -182,6 +185,22 @@
 			path = OpenSans;
 			sourceTree = "<group>";
 		};
+		8124583C2801D96000F8AF8F /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				8124583D2801D96C00F8AF8F /* Button */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		8124583D2801D96C00F8AF8F /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				8124583E2801D97900F8AF8F /* PrimaryButtonStyle.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -270,6 +289,7 @@
 				811E131028018A98008EC202 /* LoginFns.swift in Sources */,
 				8124582C2801BF2000F8AF8F /* Fonts+Generated.swift in Sources */,
 				8124582F2801BF3300F8AF8F /* Font.swift in Sources */,
+				8124583F2801D97900F8AF8F /* PrimaryButtonStyle.swift in Sources */,
 				811E13292801B692008EC202 /* Assets+Generated.swift in Sources */,
 				811E12FD28017CC7008EC202 /* FinancialJournalApp.swift in Sources */,
 				811E132C2801B793008EC202 /* Colors+Generated.swift in Sources */,
@@ -421,6 +441,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -450,6 +471,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

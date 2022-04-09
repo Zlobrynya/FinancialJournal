@@ -11,10 +11,13 @@ struct LoginFns: View {
     var body: some View {
         VStack(spacing: 16) {
             Asset.loginRecieptIcon.image
+                .resizable()
             information
             Spacer()
             buttonEsia
-        }.background(Colors.primaryBg.color)
+        }
+        .padding()
+        .background(Colors.primaryBg.color)
     }
     
     private var information: some View {
@@ -35,6 +38,7 @@ struct LoginFns: View {
                 Text(Strings.LoginFns.esia)
             }
         )
+        .buttonStyle(.primary)
     }
 }
 
