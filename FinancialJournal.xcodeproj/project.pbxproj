@@ -14,6 +14,10 @@
 		811E130E28018072008EC202 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811E130D28018072008EC202 /* WebView.swift */; };
 		811E131028018A98008EC202 /* LoginFns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811E130F28018A98008EC202 /* LoginFns.swift */; };
 		811E131428019CA4008EC202 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 811E131628019CA4008EC202 /* Localizable.strings */; };
+		811E13242801B3B7008EC202 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 811E13232801B3B7008EC202 /* Colors.xcassets */; };
+		811E13292801B692008EC202 /* Assets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811E13272801B692008EC202 /* Assets+Generated.swift */; };
+		811E132A2801B692008EC202 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811E13282801B692008EC202 /* Strings+Generated.swift */; };
+		811E132C2801B793008EC202 /* Colors+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811E132B2801B793008EC202 /* Colors+Generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		811E130F28018A98008EC202 /* LoginFns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFns.swift; sourceTree = "<group>"; };
 		811E131528019CA4008EC202 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		811E131728019CA6008EC202 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		811E13232801B3B7008EC202 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		811E13272801B692008EC202 /* Assets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Assets+Generated.swift"; sourceTree = "<group>"; };
+		811E13282801B692008EC202 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
+		811E132B2801B793008EC202 /* Colors+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Colors+Generated.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,7 @@
 				811E12FC28017CC7008EC202 /* FinancialJournalApp.swift */,
 				811E12FE28017CC7008EC202 /* ContentView.swift */,
 				811E131128019C6C008EC202 /* Resources */,
+				811E13262801B67E008EC202 /* Generated */,
 				811E130228017CCB008EC202 /* Preview Content */,
 			);
 			path = FinancialJournal;
@@ -103,10 +112,29 @@
 		811E131128019C6C008EC202 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				811E13252801B5C8008EC202 /* Strings */,
+				811E13232801B3B7008EC202 /* Colors.xcassets */,
 				811E130028017CCB008EC202 /* Assets.xcassets */,
-				811E131628019CA4008EC202 /* Localizable.strings */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		811E13252801B5C8008EC202 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				811E131628019CA4008EC202 /* Localizable.strings */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		811E13262801B67E008EC202 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				811E132B2801B793008EC202 /* Colors+Generated.swift */,
+				811E13272801B692008EC202 /* Assets+Generated.swift */,
+				811E13282801B692008EC202 /* Strings+Generated.swift */,
+			);
+			path = Generated;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +153,8 @@
 			dependencies = (
 			);
 			name = FinancialJournal;
+			packageProductDependencies = (
+			);
 			productName = FinancialJournal;
 			productReference = 811E12F928017CC7008EC202 /* FinancialJournal.app */;
 			productType = "com.apple.product-type.application";
@@ -154,6 +184,8 @@
 				ru,
 			);
 			mainGroup = 811E12F028017CC7008EC202;
+			packageReferences = (
+			);
 			productRefGroup = 811E12FA28017CC7008EC202 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -169,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				811E130428017CCB008EC202 /* Preview Assets.xcassets in Resources */,
+				811E13242801B3B7008EC202 /* Colors.xcassets in Resources */,
 				811E131428019CA4008EC202 /* Localizable.strings in Resources */,
 				811E130128017CCB008EC202 /* Assets.xcassets in Resources */,
 			);
@@ -183,8 +216,11 @@
 			files = (
 				811E130E28018072008EC202 /* WebView.swift in Sources */,
 				811E12FF28017CC7008EC202 /* ContentView.swift in Sources */,
+				811E132A2801B692008EC202 /* Strings+Generated.swift in Sources */,
 				811E131028018A98008EC202 /* LoginFns.swift in Sources */,
+				811E13292801B692008EC202 /* Assets+Generated.swift in Sources */,
 				811E12FD28017CC7008EC202 /* FinancialJournalApp.swift in Sources */,
+				811E132C2801B793008EC202 /* Colors+Generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
