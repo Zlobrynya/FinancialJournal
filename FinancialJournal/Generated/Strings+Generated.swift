@@ -11,12 +11,9 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 public enum Strings {
 
-  public enum LigunFns {
-    public static let esia = Strings.tr("Localizable", "LigunFns.Esia")
-  }
-
   public enum LoginFns {
     public static let description = Strings.tr("Localizable", "LoginFns.Description")
+    public static let esia = Strings.tr("Localizable", "LoginFns.Esia")
     public static let title = Strings.tr("Localizable", "LoginFns.Title")
   }
 }

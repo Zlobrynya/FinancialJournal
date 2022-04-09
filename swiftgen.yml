@@ -31,6 +31,17 @@ strings:
         noComments: 1
       output: Strings+Generated.swift
 
+fonts:
+  inputs: OpenSans
+  outputs:
+    ##templateName: swift5
+    templatePath: SwiftGenStencil/fonts.stencil
+    output: Fonts+Generated.swift
+    typealias: Fonts
+    params:
+      publicAccess: true
+      enumName: Fonts
+      typealias: Font
 
 
 

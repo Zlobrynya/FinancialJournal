@@ -6,8 +6,8 @@
   
 */
 
-// MARK: Login FNC
+// MARK: Login FNS
 
-"LoginFns.Title" = "Сканирование чеков";
-"LoginFns.Description" = "Для возможность сканировать чек, нужно авторизоваться в ФНС";
-"LigunFns.Esia" = "ESIA";
+"LoginFns.Title" = "Scanning receipts";
+"LoginFns.Description" = "To be able to scan receipts, you must first log in through the FNS";
+"LoginFns.Esia" = "ESIA";

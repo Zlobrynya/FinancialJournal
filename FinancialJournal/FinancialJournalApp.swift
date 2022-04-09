@@ -11,7 +11,7 @@ import SwiftUI
 struct FinancialJournalApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginFns()
         }
     }
 }

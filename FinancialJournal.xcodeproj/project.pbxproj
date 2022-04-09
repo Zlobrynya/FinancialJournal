@@ -18,6 +18,13 @@
 		811E13292801B692008EC202 /* Assets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811E13272801B692008EC202 /* Assets+Generated.swift */; };
 		811E132A2801B692008EC202 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811E13282801B692008EC202 /* Strings+Generated.swift */; };
 		811E132C2801B793008EC202 /* Colors+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811E132B2801B793008EC202 /* Colors+Generated.swift */; };
+		8124582C2801BF2000F8AF8F /* Fonts+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8124582B2801BF2000F8AF8F /* Fonts+Generated.swift */; };
+		8124582F2801BF3300F8AF8F /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8124582E2801BF3300F8AF8F /* Font.swift */; };
+		812458362801C04C00F8AF8F /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 812458312801C04C00F8AF8F /* OpenSans-SemiBold.ttf */; };
+		812458372801C04C00F8AF8F /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 812458322801C04C00F8AF8F /* OpenSans-Light.ttf */; };
+		812458382801C04C00F8AF8F /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 812458332801C04C00F8AF8F /* OpenSans-Italic.ttf */; };
+		812458392801C04C00F8AF8F /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 812458342801C04C00F8AF8F /* OpenSans-Bold.ttf */; };
+		8124583A2801C04C00F8AF8F /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 812458352801C04C00F8AF8F /* OpenSans-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +41,13 @@
 		811E13272801B692008EC202 /* Assets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Assets+Generated.swift"; sourceTree = "<group>"; };
 		811E13282801B692008EC202 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		811E132B2801B793008EC202 /* Colors+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Colors+Generated.swift"; sourceTree = "<group>"; };
+		8124582B2801BF2000F8AF8F /* Fonts+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Fonts+Generated.swift"; sourceTree = "<group>"; };
+		8124582E2801BF3300F8AF8F /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		812458312801C04C00F8AF8F /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		812458322801C04C00F8AF8F /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		812458332801C04C00F8AF8F /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		812458342801C04C00F8AF8F /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		812458352801C04C00F8AF8F /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +80,9 @@
 		811E12FB28017CC7008EC202 /* FinancialJournal */ = {
 			isa = PBXGroup;
 			children = (
-				811E130B28017ED1008EC202 /* View */,
-				811E130A28017E46008EC202 /* CheckReceipt */,
+				8124582D2801BF2800F8AF8F /* Extensions */,
+				811E130B28017ED1008EC202 /* Views */,
+				8124582A2801BAA700F8AF8F /* Feature */,
 				811E12FC28017CC7008EC202 /* FinancialJournalApp.swift */,
 				811E12FE28017CC7008EC202 /* ContentView.swift */,
 				811E131128019C6C008EC202 /* Resources */,
@@ -93,12 +108,12 @@
 			path = CheckReceipt;
 			sourceTree = "<group>";
 		};
-		811E130B28017ED1008EC202 /* View */ = {
+		811E130B28017ED1008EC202 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				811E130C28017ED9008EC202 /* WebView */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		811E130C28017ED9008EC202 /* WebView */ = {
@@ -112,6 +127,7 @@
 		811E131128019C6C008EC202 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				812458302801C04C00F8AF8F /* OpenSans */,
 				811E13252801B5C8008EC202 /* Strings */,
 				811E13232801B3B7008EC202 /* Colors.xcassets */,
 				811E130028017CCB008EC202 /* Assets.xcassets */,
@@ -130,11 +146,40 @@
 		811E13262801B67E008EC202 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
+				8124582B2801BF2000F8AF8F /* Fonts+Generated.swift */,
 				811E132B2801B793008EC202 /* Colors+Generated.swift */,
 				811E13272801B692008EC202 /* Assets+Generated.swift */,
 				811E13282801B692008EC202 /* Strings+Generated.swift */,
 			);
 			path = Generated;
+			sourceTree = "<group>";
+		};
+		8124582A2801BAA700F8AF8F /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				811E130A28017E46008EC202 /* CheckReceipt */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		8124582D2801BF2800F8AF8F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8124582E2801BF3300F8AF8F /* Font.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		812458302801C04C00F8AF8F /* OpenSans */ = {
+			isa = PBXGroup;
+			children = (
+				812458312801C04C00F8AF8F /* OpenSans-SemiBold.ttf */,
+				812458322801C04C00F8AF8F /* OpenSans-Light.ttf */,
+				812458332801C04C00F8AF8F /* OpenSans-Italic.ttf */,
+				812458342801C04C00F8AF8F /* OpenSans-Bold.ttf */,
+				812458352801C04C00F8AF8F /* OpenSans-Regular.ttf */,
+			);
+			path = OpenSans;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,10 +245,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				812458372801C04C00F8AF8F /* OpenSans-Light.ttf in Resources */,
 				811E130428017CCB008EC202 /* Preview Assets.xcassets in Resources */,
+				812458392801C04C00F8AF8F /* OpenSans-Bold.ttf in Resources */,
 				811E13242801B3B7008EC202 /* Colors.xcassets in Resources */,
+				812458362801C04C00F8AF8F /* OpenSans-SemiBold.ttf in Resources */,
 				811E131428019CA4008EC202 /* Localizable.strings in Resources */,
 				811E130128017CCB008EC202 /* Assets.xcassets in Resources */,
+				8124583A2801C04C00F8AF8F /* OpenSans-Regular.ttf in Resources */,
+				812458382801C04C00F8AF8F /* OpenSans-Italic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +268,8 @@
 				811E12FF28017CC7008EC202 /* ContentView.swift in Sources */,
 				811E132A2801B692008EC202 /* Strings+Generated.swift in Sources */,
 				811E131028018A98008EC202 /* LoginFns.swift in Sources */,
+				8124582C2801BF2000F8AF8F /* Fonts+Generated.swift in Sources */,
+				8124582F2801BF3300F8AF8F /* Font.swift in Sources */,
 				811E13292801B692008EC202 /* Assets+Generated.swift in Sources */,
 				811E12FD28017CC7008EC202 /* FinancialJournalApp.swift in Sources */,
 				811E132C2801B793008EC202 /* Colors+Generated.swift in Sources */,
