@@ -30,8 +30,14 @@
 		81D54D3C281436040093D7A5 /* Api.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81D54D3B281436040093D7A5 /* Api.plist */; };
 		81D54D41281439090093D7A5 /* LoginFnsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D54D40281439090093D7A5 /* LoginFnsModel.swift */; };
 		81D54D43281439990093D7A5 /* Localizable+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D54D42281439990093D7A5 /* Localizable+Generated.swift */; };
-		81D54D4928143AB00093D7A5 /* EsiaLinkDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D54D4828143AB00093D7A5 /* EsiaLinkDto.swift */; };
+		81D54D4928143AB00093D7A5 /* EsiaUrlDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D54D4828143AB00093D7A5 /* EsiaUrlDto.swift */; };
 		81D54D4B28143B5B0093D7A5 /* Api+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D54D4A28143B5B0093D7A5 /* Api+Generated.swift */; };
+		81D54D4D281465A30093D7A5 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D54D4C281465A30093D7A5 /* Api.swift */; };
+		81D54D5028146AD00093D7A5 /* Url.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D54D4F28146AD00093D7A5 /* Url.swift */; };
+		81D54D5228146B610093D7A5 /* SessionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D54D5128146B610093D7A5 /* SessionData.swift */; };
+		81D54D5428146C1E0093D7A5 /* EsiaLoginParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D54D5328146C1E0093D7A5 /* EsiaLoginParameters.swift */; };
+		81D54D5728146C5C0093D7A5 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81D54D5628146C5C0093D7A5 /* Keys.plist */; };
+		81D54D5928146CAA0093D7A5 /* Keys+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D54D5828146CAA0093D7A5 /* Keys+Generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,8 +65,14 @@
 		81D54D3B281436040093D7A5 /* Api.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Api.plist; sourceTree = "<group>"; };
 		81D54D40281439090093D7A5 /* LoginFnsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFnsModel.swift; sourceTree = "<group>"; };
 		81D54D42281439990093D7A5 /* Localizable+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Localizable+Generated.swift"; sourceTree = "<group>"; };
-		81D54D4828143AB00093D7A5 /* EsiaLinkDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsiaLinkDto.swift; sourceTree = "<group>"; };
+		81D54D4828143AB00093D7A5 /* EsiaUrlDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsiaUrlDto.swift; sourceTree = "<group>"; };
 		81D54D4A28143B5B0093D7A5 /* Api+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Api+Generated.swift"; sourceTree = "<group>"; };
+		81D54D4C281465A30093D7A5 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		81D54D4F28146AD00093D7A5 /* Url.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Url.swift; sourceTree = "<group>"; };
+		81D54D5128146B610093D7A5 /* SessionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionData.swift; sourceTree = "<group>"; };
+		81D54D5328146C1E0093D7A5 /* EsiaLoginParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsiaLoginParameters.swift; sourceTree = "<group>"; };
+		81D54D5628146C5C0093D7A5 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
+		81D54D5828146CAA0093D7A5 /* Keys+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Keys+Generated.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +106,11 @@
 		811E12FB28017CC7008EC202 /* FinancialJournal */ = {
 			isa = PBXGroup;
 			children = (
-				8124583C2801D96000F8AF8F /* Styles */,
 				8124582D2801BF2800F8AF8F /* Extensions */,
-				811E130B28017ED1008EC202 /* Views */,
 				8124582A2801BAA700F8AF8F /* Feature */,
+				8124583C2801D96000F8AF8F /* Styles */,
+				811E130B28017ED1008EC202 /* Views */,
+				81D54D5D2814738D0093D7A5 /* Data */,
 				811E12FC28017CC7008EC202 /* FinancialJournalApp.swift */,
 				811E12FE28017CC7008EC202 /* ContentView.swift */,
 				811E131128019C6C008EC202 /* Resources */,
@@ -145,6 +158,7 @@
 		811E131128019C6C008EC202 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				81D54D5528146C450093D7A5 /* Keys */,
 				81D54D3D2814370E0093D7A5 /* Api */,
 				812458302801C04C00F8AF8F /* OpenSans */,
 				811E13252801B5C8008EC202 /* Strings */,
@@ -165,6 +179,7 @@
 		811E13262801B67E008EC202 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
+				81D54D5828146CAA0093D7A5 /* Keys+Generated.swift */,
 				81D54D4A28143B5B0093D7A5 /* Api+Generated.swift */,
 				81D54D42281439990093D7A5 /* Localizable+Generated.swift */,
 				8124582B2801BF2000F8AF8F /* Fonts+Generated.swift */,
@@ -186,6 +201,8 @@
 			isa = PBXGroup;
 			children = (
 				8124582E2801BF3300F8AF8F /* Font.swift */,
+				81D54D4C281465A30093D7A5 /* Api.swift */,
+				81D54D4F28146AD00093D7A5 /* Url.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -229,7 +246,8 @@
 		81D54D4628143A8C0093D7A5 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				81D54D4828143AB00093D7A5 /* EsiaLinkDto.swift */,
+				81D54D4828143AB00093D7A5 /* EsiaUrlDto.swift */,
+				81D54D5328146C1E0093D7A5 /* EsiaLoginParameters.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -240,6 +258,22 @@
 				811E130F28018A98008EC202 /* LoginFnsView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		81D54D5528146C450093D7A5 /* Keys */ = {
+			isa = PBXGroup;
+			children = (
+				81D54D5628146C5C0093D7A5 /* Keys.plist */,
+			);
+			path = Keys;
+			sourceTree = "<group>";
+		};
+		81D54D5D2814738D0093D7A5 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				81D54D5128146B610093D7A5 /* SessionData.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +343,7 @@
 			files = (
 				812458372801C04C00F8AF8F /* OpenSans-Light.ttf in Resources */,
 				811E130428017CCB008EC202 /* Preview Assets.xcassets in Resources */,
+				81D54D5728146C5C0093D7A5 /* Keys.plist in Resources */,
 				812458392801C04C00F8AF8F /* OpenSans-Bold.ttf in Resources */,
 				81D54D3C281436040093D7A5 /* Api.plist in Resources */,
 				811E13242801B3B7008EC202 /* Colors.xcassets in Resources */,
@@ -330,16 +365,21 @@
 				81D54D41281439090093D7A5 /* LoginFnsModel.swift in Sources */,
 				811E130E28018072008EC202 /* WebView.swift in Sources */,
 				81D54D4B28143B5B0093D7A5 /* Api+Generated.swift in Sources */,
+				81D54D4D281465A30093D7A5 /* Api.swift in Sources */,
 				811E12FF28017CC7008EC202 /* ContentView.swift in Sources */,
 				81D54D372814347D0093D7A5 /* LoginFnsViewModel.swift in Sources */,
 				811E131028018A98008EC202 /* LoginFnsView.swift in Sources */,
-				81D54D4928143AB00093D7A5 /* EsiaLinkDto.swift in Sources */,
+				81D54D5028146AD00093D7A5 /* Url.swift in Sources */,
+				81D54D4928143AB00093D7A5 /* EsiaUrlDto.swift in Sources */,
 				8124582C2801BF2000F8AF8F /* Fonts+Generated.swift in Sources */,
 				8124582F2801BF3300F8AF8F /* Font.swift in Sources */,
 				8124583F2801D97900F8AF8F /* PrimaryButtonStyle.swift in Sources */,
+				81D54D5928146CAA0093D7A5 /* Keys+Generated.swift in Sources */,
 				81D54D43281439990093D7A5 /* Localizable+Generated.swift in Sources */,
 				811E13292801B692008EC202 /* Assets+Generated.swift in Sources */,
 				811E12FD28017CC7008EC202 /* FinancialJournalApp.swift in Sources */,
+				81D54D5428146C1E0093D7A5 /* EsiaLoginParameters.swift in Sources */,
+				81D54D5228146B610093D7A5 /* SessionData.swift in Sources */,
 				811E132C2801B793008EC202 /* Colors+Generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

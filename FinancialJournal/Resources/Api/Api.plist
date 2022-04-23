@@ -4,7 +4,9 @@
 <dict>
 	<key>BaseUrl</key>
 	<string>https://irkkt-mobile.nalog.ru:8888</string>
-	<key>esiaLink</key>
+	<key>esiaUrl</key>
 	<string>/v2/mobile/users/esia/auth/url</string>
+	<key>auth</key>
+	<string>/v2/mobile/users/esia/auth</string>
 </dict>
 </plist>

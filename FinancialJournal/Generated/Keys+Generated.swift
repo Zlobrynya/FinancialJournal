@@ -9,12 +9,10 @@ import Foundation
 // MARK: - Plist Files
 
 // swiftlint:disable identifier_name line_length type_body_length
-public enum Api {
-  private static let _document = PlistDocument(path: "Api.plist")
+public enum Keys {
+  private static let _document = PlistDocument(path: "Keys.plist")
 
-  public static let baseUrl: String = _document["BaseUrl"]
-  public static let auth: String = _document["auth"]
-  public static let esiaUrl: String = _document["esiaUrl"]
+  public static let clientSecret: String = _document["clientSecret"]
 }
 // swiftlint:enable identifier_name line_length type_body_length
 

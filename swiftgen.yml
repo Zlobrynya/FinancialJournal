@@ -53,6 +53,15 @@ plist:
         enumName: Api
         noComments: 1
 
+plist:
+  inputs: Keys
+  outputs:
+    templateName: runtime-swift5
+    output: Keys+Generated.swift
+    params:
+        publicAccess: true
+        enumName: Keys
+        noComments: 1
 
 
 ## Note: all of the config entries below are just examples with placeholders. Be sure to edit and adjust to your needs when uncommenting.

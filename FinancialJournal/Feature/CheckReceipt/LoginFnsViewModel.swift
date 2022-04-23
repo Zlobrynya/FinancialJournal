@@ -12,6 +12,12 @@ final class LoginFnsViewModel: ObservableObject {
     // MARK: - Public properties
 
     @Published var esiaUrl: URL?
+    @Published var shouldStopLoadingWebView = false {
+        didSet {
+            guard shouldStopLoadingWebView else { return }
+            esiaUrl = nil
+        }
+    }
 
     // MARK: - External Dependencies
 
@@ -26,22 +32,34 @@ final class LoginFnsViewModel: ObservableObject {
     // MARK: - Public functions
 
     func fetchEsiaUrl() {
-        Task.detached { [weak self] in
-            guard let self = self else { return }
+        Task {
             do {
-                let url = try await self.model.esiaLink()
+                let url = try await model.esiaLink()
                 await MainActor.run {
-                    self.esiaUrl = url
+                    esiaUrl = url
                 }
             } catch {
                 print(error)
             }
         }
     }
-}
 
-extension URL: Identifiable {
-    public var id: String {
-        self.absoluteString
+    func webViewDidRedirect(with url: URL) {
+        shouldStopLoadingWebView = url.absoluteString.contains(Api.baseUrl)
+        guard
+            shouldStopLoadingWebView,
+            let url = URLComponents(string: url.absoluteString),
+            let queryItems = url.queryItems,
+            let code = queryItems.first?.value,
+            let state = queryItems.last?.value
+        else { return }
+        Task {
+            do {
+                let sessionData = try await model.authorization(by: code, and: state)
+                print("🔵🔵 sessionData \(sessionData)")
+            } catch {
+                print("🔴 error \(error)")
+            }
+        }
     }
 }

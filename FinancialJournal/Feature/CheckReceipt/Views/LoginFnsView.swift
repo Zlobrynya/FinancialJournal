@@ -59,10 +59,9 @@ struct LoginFnsView: View {
         NavigationView {
             WebView(
                 url: url,
-                shouldStopLoading: $shouldStopLoading,
+                shouldStopLoading: $viewModel.shouldStopLoadingWebView,
                 didRedirect: { url, _ in
-                    print("🔴 \(url)")
-                    shouldStopLoading = url.absoluteString.contains("irkkt-mobile.nalog.ru:8888")
+                    viewModel.webViewDidRedirect(with: url)                    
                 }
             )
             .toolbar(content: {
