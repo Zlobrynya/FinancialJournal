@@ -6,6 +6,10 @@
   
 */
 
+// MARK: General
+
+"General.Close" = "Close";
+
 // MARK: Login FNC
 
 "LoginFns.Title" = "Сканирование чеков";

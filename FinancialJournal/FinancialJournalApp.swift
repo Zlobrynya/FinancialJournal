@@ -12,7 +12,7 @@ struct FinancialJournalApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                LoginFns()
+                LoginFnsView()
             }
         }
     }

@@ -12,11 +12,10 @@
 		811E130128017CCB008EC202 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 811E130028017CCB008EC202 /* Assets.xcassets */; };
 		811E130428017CCB008EC202 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 811E130328017CCB008EC202 /* Preview Assets.xcassets */; };
 		811E130E28018072008EC202 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811E130D28018072008EC202 /* WebView.swift */; };
-		811E131028018A98008EC202 /* LoginFns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811E130F28018A98008EC202 /* LoginFns.swift */; };
+		811E131028018A98008EC202 /* LoginFnsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811E130F28018A98008EC202 /* LoginFnsView.swift */; };
 		811E131428019CA4008EC202 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 811E131628019CA4008EC202 /* Localizable.strings */; };
 		811E13242801B3B7008EC202 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 811E13232801B3B7008EC202 /* Colors.xcassets */; };
 		811E13292801B692008EC202 /* Assets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811E13272801B692008EC202 /* Assets+Generated.swift */; };
-		811E132A2801B692008EC202 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811E13282801B692008EC202 /* Strings+Generated.swift */; };
 		811E132C2801B793008EC202 /* Colors+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811E132B2801B793008EC202 /* Colors+Generated.swift */; };
 		8124582C2801BF2000F8AF8F /* Fonts+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8124582B2801BF2000F8AF8F /* Fonts+Generated.swift */; };
 		8124582F2801BF3300F8AF8F /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8124582E2801BF3300F8AF8F /* Font.swift */; };
@@ -26,6 +25,13 @@
 		812458392801C04C00F8AF8F /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 812458342801C04C00F8AF8F /* OpenSans-Bold.ttf */; };
 		8124583A2801C04C00F8AF8F /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 812458352801C04C00F8AF8F /* OpenSans-Regular.ttf */; };
 		8124583F2801D97900F8AF8F /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8124583E2801D97900F8AF8F /* PrimaryButtonStyle.swift */; };
+		81D54D372814347D0093D7A5 /* LoginFnsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D54D362814347D0093D7A5 /* LoginFnsViewModel.swift */; };
+		81D54D3A281435AD0093D7A5 /* NetworkFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 81D54D39281435AD0093D7A5 /* NetworkFramework */; };
+		81D54D3C281436040093D7A5 /* Api.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81D54D3B281436040093D7A5 /* Api.plist */; };
+		81D54D41281439090093D7A5 /* LoginFnsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D54D40281439090093D7A5 /* LoginFnsModel.swift */; };
+		81D54D43281439990093D7A5 /* Localizable+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D54D42281439990093D7A5 /* Localizable+Generated.swift */; };
+		81D54D4928143AB00093D7A5 /* EsiaLinkDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D54D4828143AB00093D7A5 /* EsiaLinkDto.swift */; };
+		81D54D4B28143B5B0093D7A5 /* Api+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D54D4A28143B5B0093D7A5 /* Api+Generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,12 +41,11 @@
 		811E130028017CCB008EC202 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		811E130328017CCB008EC202 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		811E130D28018072008EC202 /* WebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
-		811E130F28018A98008EC202 /* LoginFns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFns.swift; sourceTree = "<group>"; };
+		811E130F28018A98008EC202 /* LoginFnsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFnsView.swift; sourceTree = "<group>"; };
 		811E131528019CA4008EC202 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		811E131728019CA6008EC202 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		811E13232801B3B7008EC202 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		811E13272801B692008EC202 /* Assets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Assets+Generated.swift"; sourceTree = "<group>"; };
-		811E13282801B692008EC202 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		811E132B2801B793008EC202 /* Colors+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Colors+Generated.swift"; sourceTree = "<group>"; };
 		8124582B2801BF2000F8AF8F /* Fonts+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Fonts+Generated.swift"; sourceTree = "<group>"; };
 		8124582E2801BF3300F8AF8F /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
@@ -50,6 +55,12 @@
 		812458342801C04C00F8AF8F /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		812458352801C04C00F8AF8F /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		8124583E2801D97900F8AF8F /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
+		81D54D362814347D0093D7A5 /* LoginFnsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFnsViewModel.swift; sourceTree = "<group>"; };
+		81D54D3B281436040093D7A5 /* Api.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Api.plist; sourceTree = "<group>"; };
+		81D54D40281439090093D7A5 /* LoginFnsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFnsModel.swift; sourceTree = "<group>"; };
+		81D54D42281439990093D7A5 /* Localizable+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Localizable+Generated.swift"; sourceTree = "<group>"; };
+		81D54D4828143AB00093D7A5 /* EsiaLinkDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsiaLinkDto.swift; sourceTree = "<group>"; };
+		81D54D4A28143B5B0093D7A5 /* Api+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Api+Generated.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81D54D3A281435AD0093D7A5 /* NetworkFramework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,7 +118,10 @@
 		811E130A28017E46008EC202 /* CheckReceipt */ = {
 			isa = PBXGroup;
 			children = (
-				811E130F28018A98008EC202 /* LoginFns.swift */,
+				81D54D4728143A910093D7A5 /* Views */,
+				81D54D4628143A8C0093D7A5 /* Data */,
+				81D54D362814347D0093D7A5 /* LoginFnsViewModel.swift */,
+				81D54D40281439090093D7A5 /* LoginFnsModel.swift */,
 			);
 			path = CheckReceipt;
 			sourceTree = "<group>";
@@ -130,6 +145,7 @@
 		811E131128019C6C008EC202 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				81D54D3D2814370E0093D7A5 /* Api */,
 				812458302801C04C00F8AF8F /* OpenSans */,
 				811E13252801B5C8008EC202 /* Strings */,
 				811E13232801B3B7008EC202 /* Colors.xcassets */,
@@ -149,10 +165,11 @@
 		811E13262801B67E008EC202 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
+				81D54D4A28143B5B0093D7A5 /* Api+Generated.swift */,
+				81D54D42281439990093D7A5 /* Localizable+Generated.swift */,
 				8124582B2801BF2000F8AF8F /* Fonts+Generated.swift */,
 				811E132B2801B793008EC202 /* Colors+Generated.swift */,
 				811E13272801B692008EC202 /* Assets+Generated.swift */,
-				811E13282801B692008EC202 /* Strings+Generated.swift */,
 			);
 			path = Generated;
 			sourceTree = "<group>";
@@ -201,6 +218,30 @@
 			path = Button;
 			sourceTree = "<group>";
 		};
+		81D54D3D2814370E0093D7A5 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				81D54D3B281436040093D7A5 /* Api.plist */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		81D54D4628143A8C0093D7A5 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				81D54D4828143AB00093D7A5 /* EsiaLinkDto.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		81D54D4728143A910093D7A5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				811E130F28018A98008EC202 /* LoginFnsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -218,6 +259,7 @@
 			);
 			name = FinancialJournal;
 			packageProductDependencies = (
+				81D54D39281435AD0093D7A5 /* NetworkFramework */,
 			);
 			productName = FinancialJournal;
 			productReference = 811E12F928017CC7008EC202 /* FinancialJournal.app */;
@@ -249,6 +291,7 @@
 			);
 			mainGroup = 811E12F028017CC7008EC202;
 			packageReferences = (
+				81D54D38281435AD0093D7A5 /* XCRemoteSwiftPackageReference "Pingvin-network-framework" */,
 			);
 			productRefGroup = 811E12FA28017CC7008EC202 /* Products */;
 			projectDirPath = "";
@@ -267,6 +310,7 @@
 				812458372801C04C00F8AF8F /* OpenSans-Light.ttf in Resources */,
 				811E130428017CCB008EC202 /* Preview Assets.xcassets in Resources */,
 				812458392801C04C00F8AF8F /* OpenSans-Bold.ttf in Resources */,
+				81D54D3C281436040093D7A5 /* Api.plist in Resources */,
 				811E13242801B3B7008EC202 /* Colors.xcassets in Resources */,
 				812458362801C04C00F8AF8F /* OpenSans-SemiBold.ttf in Resources */,
 				811E131428019CA4008EC202 /* Localizable.strings in Resources */,
@@ -283,13 +327,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81D54D41281439090093D7A5 /* LoginFnsModel.swift in Sources */,
 				811E130E28018072008EC202 /* WebView.swift in Sources */,
+				81D54D4B28143B5B0093D7A5 /* Api+Generated.swift in Sources */,
 				811E12FF28017CC7008EC202 /* ContentView.swift in Sources */,
-				811E132A2801B692008EC202 /* Strings+Generated.swift in Sources */,
-				811E131028018A98008EC202 /* LoginFns.swift in Sources */,
+				81D54D372814347D0093D7A5 /* LoginFnsViewModel.swift in Sources */,
+				811E131028018A98008EC202 /* LoginFnsView.swift in Sources */,
+				81D54D4928143AB00093D7A5 /* EsiaLinkDto.swift in Sources */,
 				8124582C2801BF2000F8AF8F /* Fonts+Generated.swift in Sources */,
 				8124582F2801BF3300F8AF8F /* Font.swift in Sources */,
 				8124583F2801D97900F8AF8F /* PrimaryButtonStyle.swift in Sources */,
+				81D54D43281439990093D7A5 /* Localizable+Generated.swift in Sources */,
 				811E13292801B692008EC202 /* Assets+Generated.swift in Sources */,
 				811E12FD28017CC7008EC202 /* FinancialJournalApp.swift in Sources */,
 				811E132C2801B793008EC202 /* Colors+Generated.swift in Sources */,
@@ -507,6 +555,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		81D54D38281435AD0093D7A5 /* XCRemoteSwiftPackageReference "Pingvin-network-framework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Zlobrynya/Pingvin-network-framework";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		81D54D39281435AD0093D7A5 /* NetworkFramework */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81D54D38281435AD0093D7A5 /* XCRemoteSwiftPackageReference "Pingvin-network-framework" */;
+			productName = NetworkFramework;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 811E12F128017CC7008EC202 /* Project object */;
 }

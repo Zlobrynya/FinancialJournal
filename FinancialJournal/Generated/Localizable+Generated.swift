@@ -9,12 +9,16 @@ import Foundation
 
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
-public enum Strings {
+public enum Localizable {
+
+  public enum General {
+    public static let close = Localizable.tr("Localizable", "General.Close")
+  }
 
   public enum LoginFns {
-    public static let description = Strings.tr("Localizable", "LoginFns.Description")
-    public static let esia = Strings.tr("Localizable", "LoginFns.Esia")
-    public static let title = Strings.tr("Localizable", "LoginFns.Title")
+    public static let description = Localizable.tr("Localizable", "LoginFns.Description")
+    public static let esia = Localizable.tr("Localizable", "LoginFns.Esia")
+    public static let title = Localizable.tr("Localizable", "LoginFns.Title")
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
@@ -22,7 +26,7 @@ public enum Strings {
 
 // MARK: - Implementation Details
 
-extension Strings {
+extension Localizable {
   private static func tr(_ table: String, _ key: String, _ args: CVarArg...) -> String {
     let format = BundleToken.bundle.localizedString(forKey: key, value: nil, table: table)
     return String(format: format, locale: Locale.current, arguments: args)

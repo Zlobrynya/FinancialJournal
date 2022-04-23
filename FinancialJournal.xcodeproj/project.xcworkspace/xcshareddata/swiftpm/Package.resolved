@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "pingvin-network-framework",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Zlobrynya/Pingvin-network-framework",
+      "state" : {
+        "branch" : "main",
+        "revision" : "d5b93cfd9964f6f8d04613bb4f76c6309fa0b7eb"
+      }
+    }
+  ],
+  "version" : 2
+}
