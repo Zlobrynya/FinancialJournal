@@ -22,11 +22,16 @@ final class LoginFnsViewModel: ObservableObject {
     // MARK: - External Dependencies
 
     private let model: LoginFnsModelProtocol
+    private let sensitiveDataRepository: SensitiveDataRepositoryProtocol
 
     // MARK: - Lifecycle
 
-    init(model: LoginFnsModelProtocol = LoginFnsModel()) {
+    init(
+        model: LoginFnsModelProtocol = LoginFnsModel(),
+        sensitiveDataRepository: SensitiveDataRepositoryProtocol = SensitiveDataRepository()
+    ) {
         self.model = model
+        self.sensitiveDataRepository = sensitiveDataRepository
     }
 
     // MARK: - Public functions
@@ -39,7 +44,7 @@ final class LoginFnsViewModel: ObservableObject {
                     esiaUrl = url
                 }
             } catch {
-                print(error)
+                Log.error(error)
             }
         }
     }
@@ -56,9 +61,9 @@ final class LoginFnsViewModel: ObservableObject {
         Task {
             do {
                 let sessionData = try await model.authorization(by: code, and: state)
-                print("🔵🔵 sessionData \(sessionData)")
+                sensitiveDataRepository.storeSessionData(sessionData)
             } catch {
-                print("🔴 error \(error)")
+                Log.error(error)
             }
         }
     }

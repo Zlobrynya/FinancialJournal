@@ -38,6 +38,12 @@
 		81D54D5428146C1E0093D7A5 /* EsiaLoginParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D54D5328146C1E0093D7A5 /* EsiaLoginParameters.swift */; };
 		81D54D5728146C5C0093D7A5 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81D54D5628146C5C0093D7A5 /* Keys.plist */; };
 		81D54D5928146CAA0093D7A5 /* Keys+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D54D5828146CAA0093D7A5 /* Keys+Generated.swift */; };
+		81D54D6128155AC30093D7A5 /* SessionIdValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D54D6028155AC30093D7A5 /* SessionIdValue.swift */; };
+		81D54D6428155B3A0093D7A5 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D54D6328155B3A0093D7A5 /* KeychainStore.swift */; };
+		81D54D6728155FB40093D7A5 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D54D6628155FB40093D7A5 /* Log.swift */; };
+		81D54D69281560470093D7A5 /* RefreshTokenValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D54D68281560470093D7A5 /* RefreshTokenValue.swift */; };
+		81D54D6B281560560093D7A5 /* OptionalStringValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D54D6A281560560093D7A5 /* OptionalStringValue.swift */; };
+		81D54D6D281560EC0093D7A5 /* SensitiveDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D54D6C281560EC0093D7A5 /* SensitiveDataRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +79,12 @@
 		81D54D5328146C1E0093D7A5 /* EsiaLoginParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsiaLoginParameters.swift; sourceTree = "<group>"; };
 		81D54D5628146C5C0093D7A5 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		81D54D5828146CAA0093D7A5 /* Keys+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Keys+Generated.swift"; sourceTree = "<group>"; };
+		81D54D6028155AC30093D7A5 /* SessionIdValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionIdValue.swift; sourceTree = "<group>"; };
+		81D54D6328155B3A0093D7A5 /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
+		81D54D6628155FB40093D7A5 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		81D54D68281560470093D7A5 /* RefreshTokenValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshTokenValue.swift; sourceTree = "<group>"; };
+		81D54D6A281560560093D7A5 /* OptionalStringValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalStringValue.swift; sourceTree = "<group>"; };
+		81D54D6C281560EC0093D7A5 /* SensitiveDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensitiveDataRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				8124582D2801BF2800F8AF8F /* Extensions */,
+				81D54D5E281558DA0093D7A5 /* Services */,
 				8124582A2801BAA700F8AF8F /* Feature */,
 				8124583C2801D96000F8AF8F /* Styles */,
 				811E130B28017ED1008EC202 /* Views */,
@@ -276,6 +289,43 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		81D54D5E281558DA0093D7A5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				81D54D6528155FAD0093D7A5 /* Log */,
+				81D54D6228155B290093D7A5 /* SensitiveData */,
+				81D54D5F28155AA30093D7A5 /* StringValue */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		81D54D5F28155AA30093D7A5 /* StringValue */ = {
+			isa = PBXGroup;
+			children = (
+				81D54D6A281560560093D7A5 /* OptionalStringValue.swift */,
+				81D54D6028155AC30093D7A5 /* SessionIdValue.swift */,
+				81D54D68281560470093D7A5 /* RefreshTokenValue.swift */,
+			);
+			path = StringValue;
+			sourceTree = "<group>";
+		};
+		81D54D6228155B290093D7A5 /* SensitiveData */ = {
+			isa = PBXGroup;
+			children = (
+				81D54D6328155B3A0093D7A5 /* KeychainStore.swift */,
+				81D54D6C281560EC0093D7A5 /* SensitiveDataRepository.swift */,
+			);
+			path = SensitiveData;
+			sourceTree = "<group>";
+		};
+		81D54D6528155FAD0093D7A5 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				81D54D6628155FB40093D7A5 /* Log.swift */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -363,6 +413,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				81D54D41281439090093D7A5 /* LoginFnsModel.swift in Sources */,
+				81D54D6128155AC30093D7A5 /* SessionIdValue.swift in Sources */,
+				81D54D6728155FB40093D7A5 /* Log.swift in Sources */,
 				811E130E28018072008EC202 /* WebView.swift in Sources */,
 				81D54D4B28143B5B0093D7A5 /* Api+Generated.swift in Sources */,
 				81D54D4D281465A30093D7A5 /* Api.swift in Sources */,
@@ -379,8 +431,12 @@
 				811E13292801B692008EC202 /* Assets+Generated.swift in Sources */,
 				811E12FD28017CC7008EC202 /* FinancialJournalApp.swift in Sources */,
 				81D54D5428146C1E0093D7A5 /* EsiaLoginParameters.swift in Sources */,
+				81D54D6428155B3A0093D7A5 /* KeychainStore.swift in Sources */,
+				81D54D69281560470093D7A5 /* RefreshTokenValue.swift in Sources */,
 				81D54D5228146B610093D7A5 /* SessionData.swift in Sources */,
+				81D54D6B281560560093D7A5 /* OptionalStringValue.swift in Sources */,
 				811E132C2801B793008EC202 /* Colors+Generated.swift in Sources */,
+				81D54D6D281560EC0093D7A5 /* SensitiveDataRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
