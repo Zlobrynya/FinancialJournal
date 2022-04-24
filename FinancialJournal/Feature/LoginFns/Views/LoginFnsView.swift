@@ -8,10 +8,14 @@
 import SwiftUI
 
 struct LoginFnsView: View {
-    
+
+    // MARK: - External Dependencies
+
     @StateObject var viewModel = LoginFnsViewModel()
     @State private var shouldStopLoading = false
-    
+
+    // MARK: - Body
+
     var body: some View {
         VStack(spacing: 16) {
             Asset.loginRecieptIcon.image
@@ -30,38 +34,36 @@ struct LoginFnsView: View {
             esiaWebView(for: url)
         })
     }
-    
+
     // MARK: - Views
-    
+
     private var information: some View {
         VStack(alignment: .leading, spacing: 11) {
             Text(Localizable.LoginFns.title)
                 .font(.boldOpenSans20)
-                .multilineTextAlignment(.leading)
             Text(Localizable.LoginFns.description)
                 .font(.regularOpenSans14)
-                .multilineTextAlignment(.leading)
-        }.padding(.horizontal, 34)
+        }
+        .multilineTextAlignment(.leading)
+        .padding(.horizontal, 34)
     }
-    
+
     private var buttonEsia: some View {
         Button(
-            action: { viewModel.fetchEsiaUrl() },
-            label: {
-                Text(Localizable.LoginFns.esia)
-            }
+            action: viewModel.fetchEsiaUrl,
+            label: { Text(Localizable.LoginFns.esia) }
         )
         .buttonStyle(.primary)
         .padding([.bottom, .horizontal], 16)
     }
-    
+
     private func esiaWebView(for url: URL) -> some View {
         NavigationView {
             WebView(
                 url: url,
                 shouldStopLoading: $viewModel.shouldStopLoadingWebView,
                 didRedirect: { url, _ in
-                    viewModel.webViewDidRedirect(with: url)                    
+                    viewModel.webViewDidRedirect(with: url)
                 }
             )
             .toolbar(content: {

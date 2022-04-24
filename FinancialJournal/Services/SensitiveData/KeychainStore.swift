@@ -13,9 +13,15 @@ enum KeychainValueType: String {
 }
 
 protocol KeychainStoreProtocol {
-    func storeValue(_ value: String, type: KeychainValueType) throws
+    func storeValue(_ value: String, type: KeychainValueType, isSynchronizableNeeded: Bool) throws
     func getStoredValue(for type: KeychainValueType) throws -> String
     func deleteStoredValue(for type: KeychainValueType) throws
+}
+
+extension KeychainStoreProtocol {
+    func storeValue(_ value: String, type: KeychainValueType, isSynchronizableNeeded: Bool = true) throws {
+        try storeValue(value, type: type, isSynchronizableNeeded: isSynchronizableNeeded)
+    }
 }
 
 struct KeychainStore: KeychainStoreProtocol {
@@ -51,10 +57,10 @@ struct KeychainStore: KeychainStoreProtocol {
             }
         }
     }
-    
+
     // MARK: - Public functions
 
-    func storeValue(_ value: String, type: KeychainValueType) throws {
+    func storeValue(_ value: String, type: KeychainValueType, isSynchronizableNeeded: Bool = true) throws {
         guard let valueData = value.data(using: String.Encoding.utf8) else {
             throw Error.creatingValueDataFailed
         }
@@ -63,6 +69,7 @@ struct KeychainStore: KeychainStoreProtocol {
             kSecClass as String: kSecClassInternetPassword,
             kSecAttrAuthenticationType as String: type.rawValue,
             kSecValueData as String: valueData,
+            kSecAttrSynchronizable as String: isSynchronizableNeeded,
         ]
 
         let status = SecItemAdd(attributes as CFDictionary, nil)
