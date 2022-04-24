@@ -141,7 +141,7 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		811E130A28017E46008EC202 /* CheckReceipt */ = {
+		811E130A28017E46008EC202 /* LoginFns */ = {
 			isa = PBXGroup;
 			children = (
 				81D54D4728143A910093D7A5 /* Views */,
@@ -149,7 +149,7 @@
 				81D54D362814347D0093D7A5 /* LoginFnsViewModel.swift */,
 				81D54D40281439090093D7A5 /* LoginFnsModel.swift */,
 			);
-			path = CheckReceipt;
+			path = LoginFns;
 			sourceTree = "<group>";
 		};
 		811E130B28017ED1008EC202 /* Views */ = {
@@ -205,7 +205,7 @@
 		8124582A2801BAA700F8AF8F /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				811E130A28017E46008EC202 /* CheckReceipt */,
+				811E130A28017E46008EC202 /* LoginFns */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
