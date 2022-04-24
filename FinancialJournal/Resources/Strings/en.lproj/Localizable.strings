@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  FinancialJournal
+
+  Created by Nikita Nikitin on 09.04.2022.
+  
+*/
+
+// MARK: General
+
+"General.Close" = "Close";
+
+// MARK: Login FNS
+
+"LoginFns.Title" = "Scanning receipts";
+"LoginFns.Description" = "To be able to scan receipts, you must first log in through the FNS";
+"LoginFns.Esia" = "ESIA";

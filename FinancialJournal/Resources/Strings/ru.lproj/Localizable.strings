@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  FinancialJournal
+
+  Created by Nikita Nikitin on 09.04.2022.
+  
+*/
+
+// MARK: General
+
+"General.Close" = "Close";
+
+// MARK: Login FNC
+
+"LoginFns.Title" = "Сканирование чеков";
+"LoginFns.Description" = "Для возможность сканировать чеки, следует сначала авторизоваться через ФНС";
+"LoginFns.Esia" = "ЕСИА";
