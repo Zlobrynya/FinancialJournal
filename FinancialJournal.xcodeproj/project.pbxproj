@@ -44,6 +44,12 @@
 		81D54D69281560470093D7A5 /* RefreshTokenValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D54D68281560470093D7A5 /* RefreshTokenValue.swift */; };
 		81D54D6B281560560093D7A5 /* OptionalStringValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D54D6A281560560093D7A5 /* OptionalStringValue.swift */; };
 		81D54D6D281560EC0093D7A5 /* SensitiveDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D54D6C281560EC0093D7A5 /* SensitiveDataRepository.swift */; };
+		81D54D7C281569110093D7A5 /* QrScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D54D7B281569110093D7A5 /* QrScannerView.swift */; };
+		81E810C9281EB598009540F3 /* CBBarcodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E810C4281EB598009540F3 /* CBBarcodeView.swift */; };
+		81E810CA281EB598009540F3 /* BarcodeFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E810C5281EB598009540F3 /* BarcodeFrame.swift */; };
+		81E810CB281EB598009540F3 /* CBScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E810C6281EB598009540F3 /* CBScanner.swift */; };
+		81E810CC281EB598009540F3 /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E810C7281EB598009540F3 /* CameraPreview.swift */; };
+		81E810CD281EB598009540F3 /* BarcodeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E810C8281EB598009540F3 /* BarcodeData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +91,13 @@
 		81D54D68281560470093D7A5 /* RefreshTokenValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshTokenValue.swift; sourceTree = "<group>"; };
 		81D54D6A281560560093D7A5 /* OptionalStringValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalStringValue.swift; sourceTree = "<group>"; };
 		81D54D6C281560EC0093D7A5 /* SensitiveDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensitiveDataRepository.swift; sourceTree = "<group>"; };
+		81D54D7B281569110093D7A5 /* QrScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrScannerView.swift; sourceTree = "<group>"; };
+		81D54D7F281569FF0093D7A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		81E810C4281EB598009540F3 /* CBBarcodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBBarcodeView.swift; sourceTree = "<group>"; };
+		81E810C5281EB598009540F3 /* BarcodeFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeFrame.swift; sourceTree = "<group>"; };
+		81E810C6281EB598009540F3 /* CBScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBScanner.swift; sourceTree = "<group>"; };
+		81E810C7281EB598009540F3 /* CameraPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
+		81E810C8281EB598009540F3 /* BarcodeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,12 +131,14 @@
 		811E12FB28017CC7008EC202 /* FinancialJournal */ = {
 			isa = PBXGroup;
 			children = (
+				81D54D7F281569FF0093D7A5 /* Info.plist */,
 				8124582D2801BF2800F8AF8F /* Extensions */,
 				81D54D5E281558DA0093D7A5 /* Services */,
 				8124582A2801BAA700F8AF8F /* Feature */,
 				8124583C2801D96000F8AF8F /* Styles */,
 				811E130B28017ED1008EC202 /* Views */,
 				81D54D5D2814738D0093D7A5 /* Data */,
+				81E810CE281EBDE7009540F3 /* ExternalDependencies */,
 				811E12FC28017CC7008EC202 /* FinancialJournalApp.swift */,
 				811E12FE28017CC7008EC202 /* ContentView.swift */,
 				811E131128019C6C008EC202 /* Resources */,
@@ -205,6 +220,7 @@
 		8124582A2801BAA700F8AF8F /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				81D54D6E2815662B0093D7A5 /* QrScanner */,
 				811E130A28017E46008EC202 /* LoginFns */,
 			);
 			path = Feature;
@@ -326,6 +342,34 @@
 			path = Log;
 			sourceTree = "<group>";
 		};
+		81D54D6E2815662B0093D7A5 /* QrScanner */ = {
+			isa = PBXGroup;
+			children = (
+				81D54D7B281569110093D7A5 /* QrScannerView.swift */,
+			);
+			path = QrScanner;
+			sourceTree = "<group>";
+		};
+		81E810C3281EB598009540F3 /* CarBode */ = {
+			isa = PBXGroup;
+			children = (
+				81E810C4281EB598009540F3 /* CBBarcodeView.swift */,
+				81E810C5281EB598009540F3 /* BarcodeFrame.swift */,
+				81E810C6281EB598009540F3 /* CBScanner.swift */,
+				81E810C7281EB598009540F3 /* CameraPreview.swift */,
+				81E810C8281EB598009540F3 /* BarcodeData.swift */,
+			);
+			path = CarBode;
+			sourceTree = "<group>";
+		};
+		81E810CE281EBDE7009540F3 /* ExternalDependencies */ = {
+			isa = PBXGroup;
+			children = (
+				81E810C3281EB598009540F3 /* CarBode */,
+			);
+			path = ExternalDependencies;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -416,7 +460,9 @@
 				81D54D6128155AC30093D7A5 /* SessionIdValue.swift in Sources */,
 				81D54D6728155FB40093D7A5 /* Log.swift in Sources */,
 				811E130E28018072008EC202 /* WebView.swift in Sources */,
+				81E810CA281EB598009540F3 /* BarcodeFrame.swift in Sources */,
 				81D54D4B28143B5B0093D7A5 /* Api+Generated.swift in Sources */,
+				81E810CB281EB598009540F3 /* CBScanner.swift in Sources */,
 				81D54D4D281465A30093D7A5 /* Api.swift in Sources */,
 				811E12FF28017CC7008EC202 /* ContentView.swift in Sources */,
 				81D54D372814347D0093D7A5 /* LoginFnsViewModel.swift in Sources */,
@@ -425,6 +471,8 @@
 				81D54D4928143AB00093D7A5 /* EsiaUrlDto.swift in Sources */,
 				8124582C2801BF2000F8AF8F /* Fonts+Generated.swift in Sources */,
 				8124582F2801BF3300F8AF8F /* Font.swift in Sources */,
+				81E810CC281EB598009540F3 /* CameraPreview.swift in Sources */,
+				81E810CD281EB598009540F3 /* BarcodeData.swift in Sources */,
 				8124583F2801D97900F8AF8F /* PrimaryButtonStyle.swift in Sources */,
 				81D54D5928146CAA0093D7A5 /* Keys+Generated.swift in Sources */,
 				81D54D43281439990093D7A5 /* Localizable+Generated.swift in Sources */,
@@ -437,6 +485,8 @@
 				81D54D6B281560560093D7A5 /* OptionalStringValue.swift in Sources */,
 				811E132C2801B793008EC202 /* Colors+Generated.swift in Sources */,
 				81D54D6D281560EC0093D7A5 /* SensitiveDataRepository.swift in Sources */,
+				81E810C9281EB598009540F3 /* CBBarcodeView.swift in Sources */,
+				81D54D7C281569110093D7A5 /* QrScannerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,11 +630,15 @@
 				DEVELOPMENT_TEAM = SQ7BQ44Y58;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FinancialJournal/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "FinancialJournal camera description.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -610,11 +664,15 @@
 				DEVELOPMENT_TEAM = SQ7BQ44Y58;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FinancialJournal/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "FinancialJournal camera description.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

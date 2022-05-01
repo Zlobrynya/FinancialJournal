@@ -12,7 +12,8 @@ struct FinancialJournalApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                LoginFnsView()
+                QrScannerView()
+                    .navigationBarTitleDisplayMode(.inline)
             }
         }
     }
