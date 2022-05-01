@@ -14,6 +14,8 @@ private enum Constants {
 }
 
 struct QrScannerView: View {
+    @State var isAnimating = false
+
     var body: some View {
         CBScanner(
             supportBarcode: [.qr],
@@ -21,27 +23,33 @@ struct QrScannerView: View {
             onFound: {
                 print("BarCodeType =", $0.type.rawValue, "Value =", $0.value)
             },
-            onCheck: { rect in
-                let correctBounds = CGRect(
-                    x: Constants.startX,
-                    y: Constants.startY,
-                    width: Constants.sizeQrFrame,
-                    height: Constants.sizeQrFrame
-                )
-                return correctBounds.contains(rect)
-            }
+            onCheck: checkRect
         )
         .overlay(overlay)
         .ignoresSafeArea(.all, edges: .all)
     }
 
     private var overlay: some View {
-        ZStack {
-            Color.white.opacity(0.3)
-            RoundedRectangle(cornerRadius: 15)
-                .frame(width: Constants.sizeQrFrame, height: Constants.sizeQrFrame)
-                .blendMode(.destinationOut)
-        }
+        Color.white.opacity(0.3)
+            .reverseMask {
+                RoundedRectangle(cornerRadius: 15)
+                    .frame(width: Constants.sizeQrFrame, height: Constants.sizeQrFrame)
+            }
+            .overlay(
+                Rectangle().fill(.red)
+                    .frame(width: Constants.sizeQrFrame, height: 2)
+                    .offset(y: isAnimating ? Constants.startX + Constants.sizeQrFrame : Constants.startX)
+                    .animation(Animation.linear(duration: 4).repeatForever(), value: isAnimating),
+                alignment: .top
+            )
+            .overlay {
+                RoundedRectangle(cornerRadius: 15)
+                    .stroke(.white, lineWidth: 6)
+                    .frame(width: Constants.sizeQrFrame + 5, height: Constants.sizeQrFrame + 5)
+            }
+            .onAppear {
+                isAnimating = true
+            }
     }
 
     private func checkRect(_ rect: CGRect) -> Bool {
@@ -51,7 +59,6 @@ struct QrScannerView: View {
             width: Constants.sizeQrFrame,
             height: Constants.sizeQrFrame
         )
-        Log.debug(rect)
         return correctBounds.contains(rect)
     }
 }
@@ -59,21 +66,5 @@ struct QrScannerView: View {
 struct QrScannerView_Previews: PreviewProvider {
     static var previews: some View {
         QrScannerView()
-    }
-}
-
-public extension View {
-    @inlinable
-    func reverseMask<Mask: View>(
-        alignment: Alignment = .center,
-        @ViewBuilder _ mask: () -> Mask
-    ) -> some View {
-        self.mask {
-            Rectangle()
-                .overlay(alignment: alignment) {
-                    mask()
-                        .blendMode(.destinationOut)
-                }
-        }
     }
 }

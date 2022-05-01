@@ -50,6 +50,7 @@
 		81E810CB281EB598009540F3 /* CBScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E810C6281EB598009540F3 /* CBScanner.swift */; };
 		81E810CC281EB598009540F3 /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E810C7281EB598009540F3 /* CameraPreview.swift */; };
 		81E810CD281EB598009540F3 /* BarcodeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E810C8281EB598009540F3 /* BarcodeData.swift */; };
+		81E810D1281F0515009540F3 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E810D0281F0515009540F3 /* View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +99,7 @@
 		81E810C6281EB598009540F3 /* CBScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBScanner.swift; sourceTree = "<group>"; };
 		81E810C7281EB598009540F3 /* CameraPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
 		81E810C8281EB598009540F3 /* BarcodeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeData.swift; sourceTree = "<group>"; };
+		81E810D0281F0515009540F3 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,7 +231,7 @@
 		8124582D2801BF2800F8AF8F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				8124582E2801BF3300F8AF8F /* Font.swift */,
+				81E810CF281F050A009540F3 /* View */,
 				81D54D4C281465A30093D7A5 /* Api.swift */,
 				81D54D4F28146AD00093D7A5 /* Url.swift */,
 			);
@@ -370,6 +372,15 @@
 			path = ExternalDependencies;
 			sourceTree = "<group>";
 		};
+		81E810CF281F050A009540F3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8124582E2801BF3300F8AF8F /* Font.swift */,
+				81E810D0281F0515009540F3 /* View.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -456,6 +467,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81E810D1281F0515009540F3 /* View.swift in Sources */,
 				81D54D41281439090093D7A5 /* LoginFnsModel.swift in Sources */,
 				81D54D6128155AC30093D7A5 /* SessionIdValue.swift in Sources */,
 				81D54D6728155FB40093D7A5 /* Log.swift in Sources */,
