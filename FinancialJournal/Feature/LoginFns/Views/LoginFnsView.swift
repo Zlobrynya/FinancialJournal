@@ -11,7 +11,7 @@ struct LoginFnsView: View {
 
     // MARK: - External Dependencies
 
-    @StateObject var viewModel = LoginFnsViewModel()
+    @ObservedObject var viewModel: LoginFnsViewModel
     @State private var shouldStopLoading = false
 
     // MARK: - Body
@@ -77,6 +77,6 @@ struct LoginFnsView: View {
 
 struct LoginFns_Previews: PreviewProvider {
     static var previews: some View {
-        LoginFnsView()
+        LoginFnsView(viewModel: .init(coordinator: .init()))
     }
 }

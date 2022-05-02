@@ -37,7 +37,7 @@ import Foundation
             let className = file.split(separator: "/").last ?? ""
             let function = function.split(separator: "(").first ?? ""
             let date = Date().getFormattedDate(format: "HH:mm:ss")
-            Swift.debugPrint("\(type.rawValue) \(className)[\(line)]  \(date) - \(function): \(String(describing: value))")
+            Swift.debugPrint("\(type.rawValue) \(className)[\(line)] \(date)-\(function): \(String(describing: value))")
         }
     }
 

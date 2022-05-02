@@ -14,15 +14,14 @@ private enum Constants {
 }
 
 struct QrScannerView: View {
+    @ObservedObject var viewModel: QrScannerViewModel
     @State var isAnimating = false
 
     var body: some View {
         CBScanner(
             supportBarcode: [.qr],
             scanInterval: 1,
-            onFound: {
-                print("BarCodeType =", $0.type.rawValue, "Value =", $0.value)
-            },
+            onFound: { viewModel.foundQrData($0.value) },
             onCheck: checkRect
         )
         .overlay(overlay)
@@ -65,6 +64,6 @@ struct QrScannerView: View {
 
 struct QrScannerView_Previews: PreviewProvider {
     static var previews: some View {
-        QrScannerView()
+        QrScannerView(viewModel: .init(coordinator: .init()))
     }
 }

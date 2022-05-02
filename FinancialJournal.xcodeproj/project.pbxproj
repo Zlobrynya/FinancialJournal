@@ -25,6 +25,10 @@
 		812458392801C04C00F8AF8F /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 812458342801C04C00F8AF8F /* OpenSans-Bold.ttf */; };
 		8124583A2801C04C00F8AF8F /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 812458352801C04C00F8AF8F /* OpenSans-Regular.ttf */; };
 		8124583F2801D97900F8AF8F /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8124583E2801D97900F8AF8F /* PrimaryButtonStyle.swift */; };
+		8173727D281FF2BE00938DDA /* QrScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173727C281FF2BE00938DDA /* QrScannerViewModel.swift */; };
+		8173727F281FF2FA00938DDA /* QrScannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173727E281FF2FA00938DDA /* QrScannerModel.swift */; };
+		81737284281FFAFC00938DDA /* FnsMainTabCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81737283281FFAFC00938DDA /* FnsMainTabCoordinatorView.swift */; };
+		81737286281FFB0E00938DDA /* FnsMainTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81737285281FFB0E00938DDA /* FnsMainTabCoordinator.swift */; };
 		81D54D372814347D0093D7A5 /* LoginFnsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D54D362814347D0093D7A5 /* LoginFnsViewModel.swift */; };
 		81D54D3A281435AD0093D7A5 /* NetworkFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 81D54D39281435AD0093D7A5 /* NetworkFramework */; };
 		81D54D3C281436040093D7A5 /* Api.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81D54D3B281436040093D7A5 /* Api.plist */; };
@@ -74,6 +78,10 @@
 		812458342801C04C00F8AF8F /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		812458352801C04C00F8AF8F /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		8124583E2801D97900F8AF8F /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
+		8173727C281FF2BE00938DDA /* QrScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrScannerViewModel.swift; sourceTree = "<group>"; };
+		8173727E281FF2FA00938DDA /* QrScannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrScannerModel.swift; sourceTree = "<group>"; };
+		81737283281FFAFC00938DDA /* FnsMainTabCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FnsMainTabCoordinatorView.swift; sourceTree = "<group>"; };
+		81737285281FFB0E00938DDA /* FnsMainTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FnsMainTabCoordinator.swift; sourceTree = "<group>"; };
 		81D54D362814347D0093D7A5 /* LoginFnsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFnsViewModel.swift; sourceTree = "<group>"; };
 		81D54D3B281436040093D7A5 /* Api.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Api.plist; sourceTree = "<group>"; };
 		81D54D40281439090093D7A5 /* LoginFnsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFnsModel.swift; sourceTree = "<group>"; };
@@ -222,6 +230,7 @@
 		8124582A2801BAA700F8AF8F /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				81737280281FFA4000938DDA /* FnsMainTab */,
 				81D54D6E2815662B0093D7A5 /* QrScanner */,
 				811E130A28017E46008EC202 /* LoginFns */,
 			);
@@ -264,6 +273,15 @@
 				8124583E2801D97900F8AF8F /* PrimaryButtonStyle.swift */,
 			);
 			path = Button;
+			sourceTree = "<group>";
+		};
+		81737280281FFA4000938DDA /* FnsMainTab */ = {
+			isa = PBXGroup;
+			children = (
+				81737283281FFAFC00938DDA /* FnsMainTabCoordinatorView.swift */,
+				81737285281FFB0E00938DDA /* FnsMainTabCoordinator.swift */,
+			);
+			path = FnsMainTab;
 			sourceTree = "<group>";
 		};
 		81D54D3D2814370E0093D7A5 /* Api */ = {
@@ -348,6 +366,8 @@
 			isa = PBXGroup;
 			children = (
 				81D54D7B281569110093D7A5 /* QrScannerView.swift */,
+				8173727C281FF2BE00938DDA /* QrScannerViewModel.swift */,
+				8173727E281FF2FA00938DDA /* QrScannerModel.swift */,
 			);
 			path = QrScanner;
 			sourceTree = "<group>";
@@ -468,6 +488,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81E810D1281F0515009540F3 /* View.swift in Sources */,
+				81737286281FFB0E00938DDA /* FnsMainTabCoordinator.swift in Sources */,
 				81D54D41281439090093D7A5 /* LoginFnsModel.swift in Sources */,
 				81D54D6128155AC30093D7A5 /* SessionIdValue.swift in Sources */,
 				81D54D6728155FB40093D7A5 /* Log.swift in Sources */,
@@ -482,6 +503,7 @@
 				81D54D5028146AD00093D7A5 /* Url.swift in Sources */,
 				81D54D4928143AB00093D7A5 /* EsiaUrlDto.swift in Sources */,
 				8124582C2801BF2000F8AF8F /* Fonts+Generated.swift in Sources */,
+				8173727F281FF2FA00938DDA /* QrScannerModel.swift in Sources */,
 				8124582F2801BF3300F8AF8F /* Font.swift in Sources */,
 				81E810CC281EB598009540F3 /* CameraPreview.swift in Sources */,
 				81E810CD281EB598009540F3 /* BarcodeData.swift in Sources */,
@@ -496,9 +518,11 @@
 				81D54D5228146B610093D7A5 /* SessionData.swift in Sources */,
 				81D54D6B281560560093D7A5 /* OptionalStringValue.swift in Sources */,
 				811E132C2801B793008EC202 /* Colors+Generated.swift in Sources */,
+				8173727D281FF2BE00938DDA /* QrScannerViewModel.swift in Sources */,
 				81D54D6D281560EC0093D7A5 /* SensitiveDataRepository.swift in Sources */,
 				81E810C9281EB598009540F3 /* CBBarcodeView.swift in Sources */,
 				81D54D7C281569110093D7A5 /* QrScannerView.swift in Sources */,
+				81737284281FFAFC00938DDA /* FnsMainTabCoordinatorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

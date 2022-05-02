@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-final class LoginFnsViewModel: ObservableObject {
+final class LoginFnsViewModel: ObservableObject, Identifiable {
 
     // MARK: - Public properties
 
@@ -18,19 +18,24 @@ final class LoginFnsViewModel: ObservableObject {
             esiaUrl = nil
         }
     }
+    
+    var id: UUID = UUID()
 
     // MARK: - External Dependencies
 
     private let model: LoginFnsModelProtocol
     private let sensitiveDataRepository: SensitiveDataRepositoryProtocol
+    private unowned let coordinator: FnsMainTabCoordinator
 
     // MARK: - Lifecycle
 
     init(
+        coordinator: FnsMainTabCoordinator,
         model: LoginFnsModelProtocol = LoginFnsModel(),
         sensitiveDataRepository: SensitiveDataRepositoryProtocol = SensitiveDataRepository()
     ) {
         self.model = model
+        self.coordinator = coordinator
         self.sensitiveDataRepository = sensitiveDataRepository
     }
 
@@ -58,10 +63,15 @@ final class LoginFnsViewModel: ObservableObject {
             let code = queryItems.first?.value,
             let state = queryItems.last?.value
         else { return }
-        Task {
+        fetchSession(code: code, state: state)
+    }
+    
+    private func fetchSession(code: String, state: String) {
+        Task.detached { [weak coordinator, model, sensitiveDataRepository] in
             do {
                 let sessionData = try await model.authorization(by: code, and: state)
                 sensitiveDataRepository.storeSessionData(sessionData)
+                coordinator?.openQrScanner()
             } catch {
                 Log.error(error)
             }

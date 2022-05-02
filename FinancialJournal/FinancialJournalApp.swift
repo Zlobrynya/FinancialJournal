@@ -9,10 +9,13 @@ import SwiftUI
 
 @main
 struct FinancialJournalApp: App {
+    
+    @State var coordinator = FnsMainTabCoordinator()
+    
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                QrScannerView()
+                FnsMainTabCoordinatorView(coordinator: coordinator)
                     .navigationBarTitleDisplayMode(.inline)
             }
         }
