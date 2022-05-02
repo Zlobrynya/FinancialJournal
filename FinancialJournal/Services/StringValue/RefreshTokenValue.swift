@@ -9,20 +9,12 @@ import Foundation
 
 struct RefreshTokenValue: OptionalStringValue {
     var value: String? {
-        try? keychainStore.getStoredValue(for: .refreshToken)
+        try? keychainStore.getStoredValue(for: .refreshToken, service: Keys.fns)
     }
 
     private var keychainStore: KeychainStoreProtocol
 
-    init(keychainStore: KeychainStoreProtocol) {
+    init(keychainStore: KeychainStoreProtocol = KeychainStore()) {
         self.keychainStore = keychainStore
-    }
-
-    func updateValue(_ value: String) {
-        do {
-            try keychainStore.storeValue(value, type: .sessionId)
-        } catch {
-            Log.error(error)
-        }
     }
 }

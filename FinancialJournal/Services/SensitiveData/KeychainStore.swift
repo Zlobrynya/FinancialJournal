@@ -10,23 +10,23 @@ import Foundation
 enum KeychainValueType: String {
     case sessionId
     case refreshToken
+    case test
 }
 
 protocol KeychainStoreProtocol {
-    func storeValue(_ value: String, type: KeychainValueType, isSynchronizableNeeded: Bool) throws
-    func getStoredValue(for type: KeychainValueType) throws -> String
-    func deleteStoredValue(for type: KeychainValueType) throws
+    func storeValue(_ value: String, type: KeychainValueType, service: String) throws
+    func getStoredValue(for type: KeychainValueType, service: String) throws -> String
+    func deleteStoredValue(for type: KeychainValueType, service: String) throws
 }
 
 extension KeychainStoreProtocol {
-    func storeValue(_ value: String, type: KeychainValueType, isSynchronizableNeeded: Bool = true) throws {
-        try storeValue(value, type: type, isSynchronizableNeeded: isSynchronizableNeeded)
+    func storeValue(_ value: String, type: KeychainValueType, service: String) throws {
+        try storeValue(value, type: type, service: service)
     }
 }
 
 struct KeychainStore: KeychainStoreProtocol {
-
-    enum Error: LocalizedError {
+    enum Error: LocalizedError, Equatable {
         case creatingValueDataFailed
         case noValue
         case unexpectedValueData
@@ -60,52 +60,85 @@ struct KeychainStore: KeychainStoreProtocol {
 
     // MARK: - Public functions
 
-    func storeValue(_ value: String, type: KeychainValueType, isSynchronizableNeeded: Bool = true) throws {
+    func storeValue(_ value: String, type: KeychainValueType, service: String) throws {
         guard let valueData = value.data(using: String.Encoding.utf8) else {
             throw Error.creatingValueDataFailed
         }
 
-        let attributes: [String: Any] = [
-            kSecClass as String: kSecClassInternetPassword,
-            kSecAttrAuthenticationType as String: type.rawValue,
-            kSecValueData as String: valueData,
-            kSecAttrSynchronizable as String: isSynchronizableNeeded,
-        ]
+        let attributes = [
+            kSecValueData: valueData,
+            kSecClass: kSecClassGenericPassword,
+            kSecAttrService: service,
+            kSecAttrAccount: type.rawValue,
+        ] as CFDictionary
 
-        let status = SecItemAdd(attributes as CFDictionary, nil)
-        guard status == errSecSuccess else { throw Error(status: status) }
+        let status = SecItemAdd(attributes, nil)
+        if status != errSecSuccess {
+            let error = Error(status: status)
+            Log.error(error)
+            if error == .errSecDuplicateItem {
+                try updateValue(value, type: type, service: service)
+            } else {
+                throw error
+            }
+        }
     }
 
-    func getStoredValue(for type: KeychainValueType) throws -> String {
-        let attributes: [String: Any] = [
-            kSecClass as String: kSecClassInternetPassword,
-            kSecAttrAuthenticationType as String: type.rawValue,
-            kSecMatchLimit as String: kSecMatchLimitOne,
-            kSecReturnAttributes as String: true,
-            kSecReturnData as String: true,
-        ]
+    func updateValue(_ value: String, type: KeychainValueType, service: String) throws {
+        guard let valueData = value.data(using: String.Encoding.utf8) else {
+            throw Error.creatingValueDataFailed
+        }
 
-        var item: CFTypeRef?
-        let status = SecItemCopyMatching(attributes as CFDictionary, &item)
+        let query = [
+            kSecAttrService: service,
+            kSecAttrAccount: type.rawValue,
+            kSecClass: kSecClassGenericPassword,
+        ] as CFDictionary
+
+        let attributes = [
+            kSecValueData as String: valueData,
+        ] as CFDictionary
+
+        let status = SecItemUpdate(query as CFDictionary, attributes as CFDictionary)
+
+        guard status != errSecItemNotFound else {
+            throw Error.noValue
+        }
+
+        guard status == errSecSuccess else {
+            throw Error(status: status)
+        }
+    }
+
+    func getStoredValue(for type: KeychainValueType, service: String) throws -> String {
+        let query = [
+            kSecAttrService: service,
+            kSecAttrAccount: type.rawValue,
+            kSecClass: kSecClassGenericPassword,
+            kSecReturnData: true,
+        ] as CFDictionary
+
+        var result: AnyObject?
+        let status = SecItemCopyMatching(query, &result)
         guard status != errSecItemNotFound else { throw Error.noValue }
         guard status == errSecSuccess else { throw Error(status: status) }
 
         guard
-            let existingItem = item as? [String: Any],
-            let valueData = existingItem[kSecValueData as String] as? Data,
-            let value = String(data: valueData, encoding: String.Encoding.utf8)
+            let existingItem = result as? Data,
+            let itemString = String(data: existingItem, encoding: String.Encoding.utf8)
         else { throw Error.unexpectedValueData }
 
-        return value
+        return itemString
     }
 
-    func deleteStoredValue(for type: KeychainValueType) throws {
-        let attributes: [String: Any] = [
-            kSecClass as String: kSecClassInternetPassword,
-            kSecAttrAuthenticationType as String: type.rawValue,
-        ]
+    func deleteStoredValue(for type: KeychainValueType, service: String) throws {
+        let attributes = [
+            kSecAttrService: service,
+            kSecAttrAccount: type.rawValue,
+            kSecClass: kSecClassGenericPassword,
+        ] as CFDictionary
 
-        let status = SecItemDelete(attributes as CFDictionary)
+        let status = SecItemDelete(attributes)
         guard status == errSecSuccess || status == errSecItemNotFound else {
             throw Error(status: status)
         }

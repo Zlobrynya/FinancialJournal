@@ -13,6 +13,7 @@ public enum Keys {
   private static let _document = PlistDocument(path: "Keys.plist")
 
   public static let clientSecret: String = _document["clientSecret"]
+  public static let fns: String = _document["fns"]
 }
 // swiftlint:enable identifier_name line_length type_body_length
 

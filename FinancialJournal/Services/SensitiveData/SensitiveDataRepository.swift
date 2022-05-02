@@ -27,8 +27,8 @@ struct SensitiveDataRepository: SensitiveDataRepositoryProtocol {
     
     func storeSessionData(_ sessionData: SessionData) {
         do {
-            try keychainStore.storeValue(sessionData.sessionId, type: .sessionId)
-            try keychainStore.storeValue(sessionData.refreshToken, type: .refreshToken)
+            try keychainStore.storeValue(sessionData.sessionId, type: .sessionId, service: Keys.fns)
+            try keychainStore.storeValue(sessionData.refreshToken, type: .refreshToken, service: Keys.fns)
         } catch {
             Log.error(error)
         }
